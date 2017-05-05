@@ -1,0 +1,87 @@
+BEGINNING TESTS FOR PART 1A
+*** TESTING INSERT ***
+adding item1,  with number 8 to heap
+Top of heap is: text_item{"item1",8}
+adding item2,  with number 36 to heap
+Top of heap is: text_item{"item2",36}
+adding item3,  with number 68 to heap
+Top of heap is: text_item{"item3",68}
+adding item4,  with number 51 to heap
+Top of heap is: text_item{"item3",68}
+adding item5,  with number 22 to heap
+Top of heap is: text_item{"item3",68}
+Cannot insert, heap array is full!
+
+
+*** TEST INSERT WITHOUT SWAP_UP ***
+New test heap 'hp2' with maximum capacity 10 was created
+Inserting 'item0' with number '100' to heap
+Top of heap is: text_item{"item0",100}
+Inserting 'item1' with number '99' to heap
+Top of heap is: text_item{"item0",100}
+Heap order: text_item{"item0",100} text_item{"item1",99} 
+
+*** TEST INSERT WITH SINGLE/MULTIPLE SWAP_UP ***
+New test heap 'hp3' with maximum capacity 10 was created
+Inserting 'item0' with number '1001' to heap
+Top of heap is: text_item{"item3",68}
+* Starting test with one swap_up *
+Inserting 'item1' with number '1002' to heap
+Top of heap is: text_item{"item1",1002}
+Inserting 'item2' with number '4' to heap
+Heap order: text_item{"item1",1002} text_item{"item0",1001} text_item{"item2",4}  
+
+BEGINNING TESTS FOR PART 1B
+*** TESTING DELETEMAX ***
+Deleting max of heap created in Part 1A
+Item returned from heap delete: text_item{"item3",68}
+Top of heap is now: text_item{"item4",51}
+Using 'deleteHeap' created
+Inserting 'item1' with number '10' to heap
+Inserting 'item2' with number '9' to heap
+Inserting 'item3' with number 8 to heap
+Deleting max
+Item returned from heap delete: text_item{"item1",10}
+Heap order: text_item{"item2",9}, text_item{"item3",8}
+Tested that delete_heap works when you swap_down with left child
+Using 'deleteHeap2' created
+Inserting 'item1' with number '11' to heap
+Inserting 'item2' with number '9' to heap
+Inserting 'item3' with number '10' to heap
+Deleting max
+Item returned from heap delete: text_item{"item1",11}
+Heap order: text_item{"item3",10} ,text_item{"item2",9}
+Tested that delete_heap works when you swap_down with right child
+Using 'emptyHeap' created
+Testing exception thrown when attempting to delete_max on an empty heap
+Cannot delete, heap is empty!
+
+BEGINNING TESTS FOR PART 2
+Found: difficult in the input file 39 time(s).
+Found: word in the input file 287 time(s).
+Found: is in the input file 6134 time(s).
+Found: Turing in the input file 0 time(s).
+Found: dificult in the input file 0 time(s).
+
+BEGINNING TESTS FOR PART 3
+*** Top 5 most frequent words: ***
+Most frequent text item: text_item{"the",40506}
+Next most frequent item: text_item{"of",19652}
+Next most frequent item: text_item{"and",14786}
+Next most frequent item: text_item{"a",14315}
+Next most frequent item: text_item{"to",13761}
+
+*** Top 5 most frequent words with at least 3 letters ***
+text_item{"the",40506}
+text_item{"and",14786}
+text_item{"was",8604}
+text_item{"his",6442}
+text_item{"which",5104}
+
+*** Top 5 most frequent words that begin with j ***
+text_item{"jean",1225}
+text_item{"just",499}
+text_item{"javert",453}
+text_item{"jondrette",162}
+text_item{"joy",136}
+
