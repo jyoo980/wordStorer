@@ -1,7 +1,7 @@
 #include "TextItem.hpp"
 using namespace std;
 
-bool TextItem :: operator==(TextItem const& other) const {
+bool TextItem::operator==(TextItem const& other) const {
 	return freq == other.freq && word == other.word;
 }
 
