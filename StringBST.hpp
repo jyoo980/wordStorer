@@ -7,15 +7,16 @@ using namespace std;
 
 typedef string TreeKey;
 
-struct NodeT {
-  TextItem data;
-  NodeT* left;
-  NodeT* right;
-}
-
 class StringBST {
  public:
-  struct NodeT;
+  struct node_t;
+
+  struct node_t {
+  TextItem data;
+  node_t* left;
+  node_t* right;
+  };
+
   StringBST();
   ~StringBST();
   bool empty() const;
@@ -23,13 +24,13 @@ class StringBST {
   void display() const;
   int size() const;
   int WordFrequency(TreeKey const& key) const;
-  NodeT* GetRoot() const;
+  node_t* GetRoot() const;
   
  private:  
-  NodeT* root;
-  int num_nodes;  
-  void insertHelper(NodeT*& n, TreeKey const& key);
-  void printInOrder(NodeT* n) const;
-  void remove(NodeT*& n);
+  node_t* root;
+  int numNodes;  
+  void insertHelper(node_t*& node, TreeKey const& key);
+  void printInOrder(node_t* node) const;
+  void remove(node_t*& node);
   
 }; 
